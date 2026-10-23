@@ -242,6 +242,13 @@ GO
 INSERT INTO Salarios(Carnet, Salario, ISSS, AFP, Renta, SalarioTotal, Activo)VALUES('WV-202606', 1200.00, 30.00, 87.00, 97.55, 985.45, 1);
 GO
 
+/* Info Fernanda */
+INSERT INTO Salarios(Carnet, Salario, ISSS, AFP, Renta, SalarioTotal, Activo)VALUES('MM-202601', 1200.00, 30.00, 87.00, 97.55, 985.45, 1);
+GO
+INSERT INTO Historial(Carnet, Fecha, Detalles) VALUES ('MM-202601', '2026-10-01', 'Salario correspondiente a Febrero');
+GO
+INSERT INTO Salarios_Historial(idSalario, idHistorial) VALUES (6, 31);
+GO
 
 /* -------- Pruebas ----------- */
 SELECT Usuarios.Carnet, Salario, ISSS,AFP,Fecha,Rol, Activo,Detalles FROM Usuarios 
@@ -283,3 +290,11 @@ UPDATE salarios SET activo = 1 WHERE idSalario = 2
 SELECT Usuarios.Carnet, Usuarios.Nombre, Apellidos, Rol, Departamentos.Nombre AS Departamento, Salario FROM Usuarios 
 INNER JOIN Departamentos ON Departamentos.idDepartamento = Usuarios.idDepartamento
 INNER JOIN Salarios ON Salarios.Carnet = Usuarios.Carnet WHERE Usuarios.Carnet != @Carnet
+
+
+
+
+SELECT Usuarios.Carnet, Usuarios.Nombre, Apellidos, Contraseña, Rol, usuarioActivo,Departamentos.Nombre as Departamento, correo FROM usuarios 
+INNER JOIN Departamentos ON Departamentos.idDepartamento = Usuarios.idDepartamento 
+INNER JOIN Salarios ON Salarios.Carnet = Usuarios.Carnet 
+
