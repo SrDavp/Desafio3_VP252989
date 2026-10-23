@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Desafio3.clases
+{
+    public class Usuario
+    {
+        public int idUsuario { get; set; }
+        string Carnet { get; set; }
+        string Nombre { get; set; }
+        string Apellidos { get; set; }
+        string Contraseña { get; set; }
+        int Rol { get; set; }
+    }
+}

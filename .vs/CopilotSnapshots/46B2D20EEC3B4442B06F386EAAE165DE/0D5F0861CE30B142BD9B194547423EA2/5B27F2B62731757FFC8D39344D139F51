@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using Microsoft.IdentityModel.Protocols;
+using System.Configuration;
+// ConfigurationManager<string> es el tipo correcto para cadenas de conexión
+
+namespace Desafio3.sql
+{
+    public class conexion
+    {
+        private string cadena = ConfigurationManager.ConnectionStrings["conexion"].ConnectionString; // ConfigurationManager<string> implícito para cadenas de conexión
+        
+    }
+}
