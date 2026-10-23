@@ -291,9 +291,6 @@ SELECT Usuarios.Carnet, Usuarios.Nombre, Apellidos, Rol, Departamentos.Nombre AS
 INNER JOIN Departamentos ON Departamentos.idDepartamento = Usuarios.idDepartamento
 INNER JOIN Salarios ON Salarios.Carnet = Usuarios.Carnet WHERE Usuarios.Carnet != @Carnet
 
-
-
-
 SELECT Usuarios.Carnet, Usuarios.Nombre, Apellidos, Contraseña, Rol, usuarioActivo,Departamentos.Nombre as Departamento, correo FROM usuarios 
 INNER JOIN Departamentos ON Departamentos.idDepartamento = Usuarios.idDepartamento 
 INNER JOIN Salarios ON Salarios.Carnet = Usuarios.Carnet 
